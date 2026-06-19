@@ -52,6 +52,18 @@ $if(pdf-trailer-id)$
 \fi
 $endif$
 
+% Header and Footer Formatting
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{} % Clear standard footers
+\fancyhead{} % Clear standard headers
+% Page numbers on the outside edges
+\fancyhead[LE,RO]{\thepage}
+% Title on Even (Left) pages, Authors on Odd (Right) pages
+\fancyhead[RE]{$title$}
+\fancyhead[LO]{$for(author)$$author$$sep$, $endfor$}
+\renewcommand{\headrulewidth}{0.4pt}
+
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
