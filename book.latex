@@ -64,6 +64,25 @@ $endif$
 \fancyhead[LO]{$for(author)$$author$$sep$, $endfor$}
 \renewcommand{\headrulewidth}{0.4pt}
 
+% Headings Formatting
+\usepackage{titlesec}
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\LARGE\scshape} % format
+{\thechapter} % label
+{0.5ex} % sep
+{}[]
+
+\titleformat
+{\section} % command
+[leftmargin] % shape
+{\bfseries\Large\scshape} % format
+{\thesection} % label
+{0.5ex} % sep
+{}[]
+
+
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
