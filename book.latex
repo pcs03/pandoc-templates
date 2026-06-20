@@ -76,10 +76,10 @@ $endif$
 
 \titleformat
 {\section} % command
-[leftmargin] % shape
+[block] % shape
 {\bfseries\Large\scshape} % format
 {\thesection} % label
-{0.5ex} % sep
+{0.1ex} % sep
 {}[]
 
 
